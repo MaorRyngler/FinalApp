@@ -8,14 +8,14 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="200dp"
-        android:background="@drawable/background3"
+        android:background="@drawable/background1"
         >
 
         <ImageView
             android:id="@+id/logo_nav"
             android:layout_width="match_parent"
             android:layout_height="140dp"
-            android:src="@drawable/food_logo_nav"
+            android:src="@drawable/app_logo"
             />
 
         <TextView
