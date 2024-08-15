@@ -1,7 +1,6 @@
 package com.example.finalappliproject.Fragments;
 
 import static android.content.ContentValues.TAG;
-import static android.os.Build.VERSION_CODES.R;
 
 import android.os.Bundle;
 import android.util.Log;
