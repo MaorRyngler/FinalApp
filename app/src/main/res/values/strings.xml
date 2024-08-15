@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">FinalAppliProject</string>
+    <string name="login">Login</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="register">Register</string>
+    <string name="welcome_to_what_to_make">Welcome to TripTip !</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="phone_number">phone number</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="logout">LogOut</string>
+    <string name="home">Home</string>
+    <string name="favorite">favorite</string>
+    <string name="profile">Profile</string>
+    <string name="trip_tip">TripTip</string>
+    <string name="my_info">My Info</string>
+    <string name="LogOut">LogOut</string>
+    <string name="share_profile">Share Profile</string>
+    <string name="communicate">Communicate</string>
+    <string name="nav_drawer_open">Open Drawer</string>
+    <string name="nav_drawer_close">Close Drawer</string>
+    <string name="userName">User Name</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tomato_soup_details">1.Saute Aromatics – heat a non–reactive pot over medium heat. Melt in 4 Tbsp butter then sautee onions until softened and golden (10–12 min). Add minced garlic and saute another minute. \n\n2.Make the tomato soup base – stir in two 28 oz cans of crushed tomatoes with their juice, your chicken stock, chopped basil, sugar and black pepper. Bring to a boil then reduce heat, partially cover and simmer 10 minutes. \n\n3.Blend if desired – use an immersion blender in the pot or blend in batches using a blender (be careful not to overfill the blender with hot liquid) and return soup to the pot. \n\n4.Add cream and parmesan – stir in the heavy cream and shredded parmesan. Return to a simmer and season to taste if needed. \n\n5.Serve – ladle into warm bowls and garnish with more parmesan and basil.</string>
+    <string name="choose_for_me">Choose For Me</string>
+    <string name="favorites">Favorites</string>
+    <string name="show_me_all_trips">All Trips</string>
+    <string name="my_toolbar">My Toolbar</string>
+</resources>

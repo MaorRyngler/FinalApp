@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:background="@drawable/background3"
+        >
+
+        <ImageView
+            android:id="@+id/logo_nav"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:src="@drawable/food_logo_nav"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo_nav"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/arvo"
+            android:gravity="center"
+            android:text="@string/trip_tip"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/favoriteButton"
+        android:layout_width="190dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="210dp"
+        android:background="@drawable/round_corners"
+        android:backgroundTint="@color/light_blue"
+        android:fontFamily="@font/arvo"
+        android:paddingTop="8dp"
+        android:text="@string/favorites"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/RandomButton"
+        android:layout_width="190dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="210dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/round_corners"
+        android:backgroundTint="@color/light_blue"
+        android:fontFamily="@font/arvo"
+        android:paddingTop="8dp"
+        android:text="Random"
+        android:textSize="28sp"
+        android:textStyle="bold"
+
+        />
+
+
+
+    <LinearLayout
+        android:id="@+id/Categories"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/RandomButton"
+        android:layout_above="@id/allTripsButton"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:id="@+id/leftLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            >
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/FridayDinner"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:background="@drawable/friday_dinner"
+                android:layout_marginBottom="10dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+
+                />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/Dinner"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/dinner_pic"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rightLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/BreakFast"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/breakfast"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="10dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+
+                />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/Lunch"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/lunch_pic"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+
+                />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/allTripsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show_me_all_trips"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/arvo"
+        android:backgroundTint="@color/light_blue"
+        android:background="@drawable/round_corners"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:padding="20dp"
+
+
+        />
+
+
+
+</RelativeLayout>
+
+
+<!--<LinearLayout-->
+<!--android:id="@+id/RadioButtons"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent"-->
+<!--android:layout_below="@id/RandomButton"-->
+<!--android:layout_above="@id/recipeButton"-->
+<!--android:orientation="horizontal"-->
+<!--android:layout_marginTop="30dp">-->
+
+<!--<LinearLayout-->
+<!--    android:id="@+id/leftCheckboxesLayout"-->
+<!--    android:layout_width="0dp"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_weight="1"-->
+<!--    android:orientation="vertical"-->
+<!--    android:gravity="center"-->
+<!--    android:layout_marginStart="10dp"-->
+<!--    >-->
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/checkbox1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Pasta"-->
+<!--        android:textSize="22sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:padding="8dp"-->
+<!--        />-->
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/checkbox2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Peperoni"-->
+<!--        android:textSize="22sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:padding="8dp"/>-->
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/checkbox3"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Tomato"-->
+<!--        android:textSize="22sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:padding="8dp"/>-->
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/checkbox4"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="garlic"-->
+<!--        android:textSize="22sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:padding="8dp"/>-->
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/checkbox5"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="mozarella"-->
+<!--        android:textSize="22sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:padding="8dp"/>-->
+
+<!--</LinearLayout>-->
+
+<!--<LinearLayout-->
+<!--    android:id="@+id/rightCheckboxesLayout"-->
+<!--    android:layout_width="0dp"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_weight="1"-->
+<!--    android:orientation="vertical"-->
+<!--    android:gravity="center">-->
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/checkbox6"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Flower"-->
+<!--        android:textSize="22sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:padding="8dp"/>-->
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/checkbox7"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Meat"-->
+<!--        android:textSize="22sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:padding="8dp"/>-->
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/checkbox8"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Chocolate"-->
+<!--        android:textSize="22sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:padding="8dp"/>-->
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/checkbox9"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Cheese"-->
+<!--        android:textSize="22sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:padding="8dp"/>-->
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/checkbox10"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Mushrooms"-->
+<!--        android:textSize="22sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:padding="8dp"/>-->
+
+<!--</LinearLayout>-->
+

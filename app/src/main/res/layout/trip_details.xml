@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+<!--            <com.google.android.material.imageview.ShapeableImageView-->
+<!--                android:id="@+id/recipe_IMG_Image"-->
+<!--                android:layout_width="170dp"-->
+<!--                android:layout_height="120dp"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:src="@drawable/ic_launcher_background" />-->
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/TripImage"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                android:src="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/TripName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TripImage"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/akaya_telivigala"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="name"
+                android:textColor="@color/black"
+                android:textSize="36sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+
+            <TextView
+                android:id="@+id/TripDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TripName"
+                android:text="@string/tomato_soup_details"
+                android:textSize="22sp">
+
+            </TextView>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
