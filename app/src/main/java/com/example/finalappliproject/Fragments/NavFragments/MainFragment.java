@@ -19,7 +19,7 @@ public class MainFragment extends Fragment {
     ShapeableImageView BtTripInAsia;
     ShapeableImageView BtTripInEurope;
     ShapeableImageView BtTripInIsrael;
-    ShapeableImageView BtLunch;
+    ShapeableImageView BtUS;
     Button BtFavorites;
     String Cat;
 
@@ -36,10 +36,10 @@ public class MainFragment extends Fragment {
     }
     
     void findViews(View rootView){
-        BtTripInAsia = rootView.findViewById(R.id.FridayDinner);
-        BtTripInEurope = rootView.findViewById(R.id.BreakFast);
-        BtTripInIsrael = rootView.findViewById(R.id.Dinner);
-        BtLunch = rootView.findViewById(R.id.Lunch);
+        BtTripInAsia = rootView.findViewById(R.id.Asia);
+        BtTripInEurope = rootView.findViewById(R.id.Europe);
+        BtTripInIsrael = rootView.findViewById(R.id.Israel);
+        BtUS = rootView.findViewById(R.id.US);
         BtFavorites = rootView.findViewById(R.id.favoriteButton);
         BtAllTrips = rootView.findViewById(R.id.allTripsButton);
 
@@ -67,7 +67,7 @@ public class MainFragment extends Fragment {
             public void onClick(View v) {
                 // Create a new instance of the destination fragment
                 TripFragment fragment = new TripFragment();
-                Cat = "FridayDinner";
+                Cat = "Asia";
                 // Create a bundle and add the recipe object as an argument
                 Bundle args = new Bundle();
                 args.putString("selectedCategory", Cat);
@@ -82,7 +82,7 @@ public class MainFragment extends Fragment {
             public void onClick(View v) {
                 // Create a new instance of the destination fragment
                 TripFragment fragment = new TripFragment();
-                Cat = "BreakFast";
+                Cat = "Europe";
                 // Create a bundle and add the recipe object as an argument
                 Bundle args = new Bundle();
                 args.putString("selectedCategory", Cat);
@@ -97,7 +97,7 @@ public class MainFragment extends Fragment {
             public void onClick(View v) {
                 // Create a new instance of the destination fragment
                 TripFragment fragment = new TripFragment();
-                Cat = "Dinner";
+                Cat = "Israel";
                 // Create a bundle and add the recipe object as an argument
                 Bundle args = new Bundle();
                 args.putString("selectedCategory", Cat);
@@ -107,12 +107,12 @@ public class MainFragment extends Fragment {
             }
         });
 
-        BtLunch.setOnClickListener(new View.OnClickListener() {
+        BtUS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Create a new instance of the destination fragment
                 TripFragment fragment = new TripFragment();
-                Cat = "Lunch";
+                Cat = "US";
                 // Create a bundle and add the recipe object as an argument
                 Bundle args = new Bundle();
                 args.putString("selectedCategory", Cat);
