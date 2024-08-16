@@ -89,23 +89,23 @@
             >
 
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/FridayDinner"
+                android:id="@+id/Asia"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:scaleType="centerCrop"
-                android:background="@drawable/friday_dinner"
+                android:background="@drawable/asia"
                 android:layout_marginBottom="10dp"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
 
                 />
 
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/Dinner"
+                android:id="@+id/Europe"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@drawable/dinner_pic"
+                android:background="@drawable/europe"
                 android:scaleType="centerCrop"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
 
@@ -123,11 +123,11 @@
             android:layout_margin="10dp">
 
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/BreakFast"
+                android:id="@+id/Israel"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@drawable/breakfast"
+                android:background="@drawable/israel"
                 android:scaleType="centerCrop"
                 android:layout_marginBottom="10dp"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
@@ -135,11 +135,11 @@
                 />
 
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/Lunch"
+                android:id="@+id/US"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@drawable/lunch_pic"
+                android:background="@drawable/us"
                 android:scaleType="centerCrop"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
 
