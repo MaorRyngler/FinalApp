@@ -144,25 +144,6 @@ public class DataManager {
         mergeMaps(trips, getTripInEuropeMap());
         mergeMaps(trips, getTripInAsiaMap());
 
-//        trips.add(new Recipe("Tomato Soup", "https://www.acouplecooks.com/wp-content/uploads/2021/09/Tomato-Soup-002.jpg",
-//                "medium", 100, "\"1. Saute Aromatics – heat a non-reactive pot over medium heat. Melt in 4 Tbsp butter then sautee onions until softened and golden (10-12 min). Add minced garlic and saute another minute.\\n\\n\" +\n" +
-//                "        \"2. Make the tomato soup base – stir in two 28 oz cans of crushed tomatoes with their juice, your chicken stock, chopped basil, sugar and black pepper. Bring to a boil then reduce heat, partially cover and simmer 10 minutes.\\n\\n\" +\n" +
-//                "        \"3. Blend if desired – use an immersion blender in the pot or blend in batches using a blender (be careful not to overfill the blender with hot liquid) and return soup to the pot.\\n\\n\" +\n" +
-//                "        \"4. Add cream and parmesan – stir in the heavy cream and shredded parmesan. Return to a simmer and season to taste if needed.\\n\\n\" +\n" +
-//                "        \"5. Serve – ladle into warm bowls and garnish with more parmesan and basil.\";\n"
-//        ));
-//
-//        trips.add(new Recipe("Pasta Carbonara", "https://www.allrecipes.com/thmb/Vg2cRidr2zcYhWGvPD8M18xM_WY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/11973-spaghetti-carbonara-ii-DDMFS-4x3-6edea51e421e4457ac0c3269f3be5157.jpg",
-//                "hard", 130, "put pasta in the bucket, then wash some onions..."));
-//
-//        trips.add(new Recipe("Chocolate Cake", "https://www.mybakingaddiction.com/wp-content/uploads/2011/10/lr-0938-700x1050.jpg",
-//                "easy", 50, "put flower in the bucket, then wash some chocolate..."));
-//
-//        trips.add(new Recipe("Meatball Spaghetti", "https://www.onceuponachef.com/images/2019/09/Spaghetti-and-Meatballs.jpg",
-//                "medium", 70, "put pasta in the bucket, then wash some meat..."));
-//
-//        trips.add(new Recipe("Pizza Peperoni", "https://foodhub.scene7.com/is/image/woolworthsltdprod/2004-easy-pepperoni-pizza:Mobile-1300x1150",
-//                "medium", 90, "put flower in the bucket, then put some peperoni..."));
 
         return trips;
     }
@@ -246,7 +227,7 @@ public class DataManager {
         categoriesMap.put("TripsInIsrael", getTripInIsraelMap());
 
         // Assume we have a reference to the parent document
-//        DocumentReference parentDocumentRef = db.collection(Constants.DBKeys.RECIPES).document("AllRecipes");
+//        DocumentReference parentDocumentRef = db.collection(Constants.DBKeys.TRIPS).document("AllTrips");
         String[] categories = {"AllTrips", "TripsInAsia", "TripsInEurope", "TripsInUS", "TripsInIsrael"};
         for (String category : categories) {
 
@@ -301,27 +282,7 @@ public class DataManager {
         }
     }
 
-    // if i will want that all the index will be from 0 - Infinity
 
-//    public static Map<Integer, Object> getAllRecipesMapWithIndex() {
-//        Map<Integer, Object> recipes = new HashMap<>();
-//        int keyIndex = 0;
-//
-//        keyIndex = mergeMap(recipes, keyIndex, getDinnerRecipesMap());
-//        keyIndex = mergeMap(recipes, keyIndex, getLunchRecipesMap());
-//        keyIndex = mergeMap(recipes, keyIndex, getBreakFastRecipesMap());
-//        keyIndex = mergeMap(recipes, keyIndex, getFridayDinnerRecipesMap());
-//
-//        return recipes;
-//    }
-//
-//    private static int mergeMap(Map<Integer, Object> destination, int startIndex, Map<String, Object> source) {
-//        for (Map.Entry<String, Object> entry : source.entrySet()) {
-//            destination.put(startIndex, entry.getValue());
-//            startIndex++;
-//        }
-//        return startIndex;
-//    }
 
 
     public void uploadTripsToDB() {
@@ -483,7 +444,7 @@ public class DataManager {
         CollectionReference collectionRef = db.collection(category);
         if (trip != null) {
             String documentId = trip.getTitle();
-            Log.d(TAG, "updateRecipe: " + trip);
+            Log.d(TAG, "updateTrip: " + trip);
             collectionRef.document(documentId).set(trip)
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
@@ -518,7 +479,7 @@ public class DataManager {
                 }
                 listener.onDataRetrieved(tripList);
 
-                // Do something with the recipes ArrayList here
+                // Do something with the trips ArrayList here
                 // For example, you can pass it to another method or update your UI
             }
         });
@@ -553,7 +514,6 @@ public class DataManager {
         CollectionReference collectionRef = userDocumentRef.collection("favorites");
         DocumentReference newDocumentRef = collectionRef.document();
         String documentId = newDocumentRef.getId(); // Get the auto-generated document ID
-//        recipe.setFavorite(true);
         newDocumentRef.set(trip)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override

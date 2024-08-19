@@ -99,7 +99,7 @@ public class Trip implements Parcelable {
 
     @Override
     public String toString() {
-        return "Recipe{" +
+        return "Trip{" +
                 "title='" + title + '\'' +
                 ", image='" + image + '\'' +
                 ", isFavorite=" + favorite +

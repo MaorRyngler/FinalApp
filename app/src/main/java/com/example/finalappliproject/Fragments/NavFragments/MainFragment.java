@@ -54,7 +54,7 @@ public class MainFragment extends Fragment {
                 // Create a new instance of the destination fragment
                 TripFragment fragment = new TripFragment();
                 Cat = "AllTrips";
-                // Create a bundle and add the recipe object as an argument
+                // Create a bundle and add the trip object as an argument
                 Bundle args = new Bundle();
                 args.putString("selectedCategory", Cat);
                 fragment.setArguments(args);
@@ -68,7 +68,7 @@ public class MainFragment extends Fragment {
                 // Create a new instance of the destination fragment
                 TripFragment fragment = new TripFragment();
                 Cat = "Asia";
-                // Create a bundle and add the recipe object as an argument
+                // Create a bundle and add the trip object as an argument
                 Bundle args = new Bundle();
                 args.putString("selectedCategory", Cat);
                 fragment.setArguments(args);
@@ -83,7 +83,7 @@ public class MainFragment extends Fragment {
                 // Create a new instance of the destination fragment
                 TripFragment fragment = new TripFragment();
                 Cat = "Europe";
-                // Create a bundle and add the recipe object as an argument
+                // Create a bundle and add the trip object as an argument
                 Bundle args = new Bundle();
                 args.putString("selectedCategory", Cat);
                 fragment.setArguments(args);
@@ -98,7 +98,7 @@ public class MainFragment extends Fragment {
                 // Create a new instance of the destination fragment
                 TripFragment fragment = new TripFragment();
                 Cat = "Israel";
-                // Create a bundle and add the recipe object as an argument
+                // Create a bundle and add the trip object as an argument
                 Bundle args = new Bundle();
                 args.putString("selectedCategory", Cat);
                 fragment.setArguments(args);
@@ -113,7 +113,7 @@ public class MainFragment extends Fragment {
                 // Create a new instance of the destination fragment
                 TripFragment fragment = new TripFragment();
                 Cat = "US";
-                // Create a bundle and add the recipe object as an argument
+                // Create a bundle and add the trip object as an argument
                 Bundle args = new Bundle();
                 args.putString("selectedCategory", Cat);
                 fragment.setArguments(args);

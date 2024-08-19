@@ -71,17 +71,7 @@ public class TripFragment extends Fragment {
         if(Objects.equals(valueOfCategory, "AllTrips"))
             tripListAdapter = new TripListAdapter(getContext(), DataManager.getAllTrips());
 
-//        switch (valueOfCategory) {
-//            case "AllRecipes":
-//                recipeListAdapter = new RecipeListAdapter(getContext(), DataManager.getAllRecipes());
-//                break;
-//            case "FridayDinner":
-//            case "BreakFast":
-//            case "Lunch":
-//            case "Dinner":
-//                recipeListAdapter = new RecipeListAdapter(getContext(), recipeList);
-//                break;
-//        }
+
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
         main_LST_trips.setLayoutManager(linearLayoutManager);
@@ -102,7 +92,7 @@ public class TripFragment extends Fragment {
                 // Create a new instance of the destination fragment
                 TripDetailsFragment fragment = new TripDetailsFragment();
 
-                // Create a bundle and add the recipe object as an argument
+                // Create a bundle and add the trip object as an argument
                 Bundle args = new Bundle();
                 args.putParcelable("selectedTrip", trip);
                 fragment.setArguments(args);

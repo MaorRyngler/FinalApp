@@ -50,12 +50,12 @@ public class TripListAdapter extends RecyclerView.Adapter<TripListAdapter.ItemVi
             holder.difficulty.setText(trip.getDifficulty());
             holder.title.setText(trip.getTitle());
             holder.preparation_time.setText(TimeFormat.getFormattedTime(trip.getTime()));
-            ImageLoader.getInstance().loadImage(trip.getImage(), holder.recipe_IMG_poster);
+            ImageLoader.getInstance().loadImage(trip.getImage(), holder.trip_IMG_poster);
             if (trip.isFavorite()){
-                holder.recipe_IMG_favorite.setImageResource(R.drawable.heart);
+                holder.trip_IMG_favorite.setImageResource(R.drawable.heart);
             }
             else{
-                holder.recipe_IMG_favorite.setImageResource(R.drawable.heart_empty);
+                holder.trip_IMG_favorite.setImageResource(R.drawable.heart_empty);
             }
 
         }
@@ -85,23 +85,23 @@ public class TripListAdapter extends RecyclerView.Adapter<TripListAdapter.ItemVi
             private MaterialTextView title;
             private MaterialTextView difficulty;
             private MaterialTextView preparation_time;
-            private ShapeableImageView recipe_IMG_poster;
-            private ShapeableImageView recipe_IMG_favorite;
+            private ShapeableImageView trip_IMG_poster;
+            private ShapeableImageView trip_IMG_favorite;
 
             public ItemViewHolder(@NonNull View itemView) {
                 super(itemView);
-                recipe_IMG_poster = itemView.findViewById(R.id.trip_IMG_Image);
+                trip_IMG_poster = itemView.findViewById(R.id.trip_IMG_Image);
                 title = itemView.findViewById(R.id.trip_LBL_title);
                 difficulty = itemView.findViewById(R.id.trip_LBL_difficulty);
                 preparation_time = itemView.findViewById(R.id.trip_LBL_duration);
-                recipe_IMG_favorite = itemView.findViewById(R.id.trip_IMG_favorite);
+                trip_IMG_favorite = itemView.findViewById(R.id.trip_IMG_favorite);
 
                 itemView.setOnClickListener(v -> {
                     if (tripCallback != null)
                         tripCallback.itemClicked(getItem(getAdapterPosition()), getAdapterPosition());
                 });
 
-                recipe_IMG_favorite.setOnClickListener(v -> {
+                trip_IMG_favorite.setOnClickListener(v -> {
                     Log.d("hi", "ItemViewHolder: hello");
                     if (tripCallback != null){
                         Trip trip = getItem(getAdapterPosition());
@@ -120,9 +120,3 @@ public class TripListAdapter extends RecyclerView.Adapter<TripListAdapter.ItemVi
 
     }
 
-//public interface OnClickListener{
-//    void onClick(int position, Recipe recipeItem);
-//}
-//    public void setOnClickListener(OnClickListener onClickListener) {
-//        this.onClickListener = onClickListener;
-//    }

@@ -71,9 +71,9 @@ public class HomeFragment extends Fragment {
                 // Create a new instance of the destination fragment
                 TripDetailsFragment fragment = new TripDetailsFragment();
 
-                // Create a bundle and add the recipe object as an argument
+                // Create a bundle and add the trip object as an argument
                 Bundle args = new Bundle();
-                args.putParcelable("selectedRecipe", trip);
+                args.putParcelable("selectedTrip", trip);
                 fragment.setArguments(args);
 
                 requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, fragment).commit();
